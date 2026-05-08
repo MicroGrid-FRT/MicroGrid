@@ -32,3 +32,9 @@ Early architecture and simulation phase.
 FRT MicroGrid 
 
 WRO 2026 – Future Innovators
+
+## License
+
+© 2026 FRT MicroGrid - All rights reserved.
+
+See the LICENSE file for details.
