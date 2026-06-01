@@ -23,9 +23,22 @@ The project focuses on decentralized autonomous micro robots capable of wireless
 - /hardware      - PCB and CAD files
 - /assets        - Images, diagrams, branding
 
+
 ## Current Status
 
 Early architecture and simulation phase.
+
+### Versions
+
+**Mark 1 (Mk. 1)** is the primary robot version.
+**Revisions (Rev. A, Rev. B, etc.)** are assigned to hardware and mechanical design changes.
+**Software versions (v. 1, v. 2, etc.)** are assigned to programs and controllers.
+
+### Simulation
+
+The Mk. 1 Rev. A robot is considered suitable as the baseline platform for future development.
+Controller v. 1 provides manual control functionality.
+Steering remains challenging, and precise positioning is currently difficult to achieve.
 
 ## Team
 
