@@ -1,0 +1,196 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.20040691550289136 0.20040691550289136 0.9589964214934452 1.60365363550765
+  position -0.0227768 -2.07586 0.813794
+  follow "MicroGrid_Mk1_SIM_RevA"
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+Floor {
+}
+Robot {
+  translation 0 0 0.1
+  children [
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        anchor -0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Left"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Left"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Left"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Left"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999971592355458 1.4677253379159376e-06 1.042960270231569e-06
+        rotation -4.0670072221210587e-07 0.9999999999998341 -4.075107513707669e-07 1.5708003046913066
+        children [
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Left_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Left_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+      }
+    }
+    Accelerometer {
+      name "Body_Accelerometer"
+    }
+    Gyro {
+      name "Body_Gyro"
+    }
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        anchor 0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Right"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Right"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Right"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16000366133659202 -1.3430607489481003e-06 1.0904219983638924e-05
+        rotation -2.8792384249406897e-08 -0.999999999999999 2.9601148634292634e-08 1.570800010229636
+        children [
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Right_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Right_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 1 0 0
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "MicroGrid_Mk1_SIM_RevA"
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "MicroGrid_Mk1_SIM_Conroller_v1"
+}
