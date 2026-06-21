@@ -212,5 +212,5 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
