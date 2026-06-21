@@ -214,7 +214,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
 DEF MICROGRID Robot {
   translation -0.00500475195136318 3.9858288187813216e-05 0.09528367999492579
@@ -411,7 +411,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
 DEF MICROGRID Robot {
   translation -0.8250337680640206 3.587827912821173e-05 0.09528980106735231
@@ -609,7 +609,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
 DEF MICROGRID Robot {
   translation -1.6450493414397838 3.1996273474891736e-05 0.09530050548507848
@@ -807,7 +807,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
 DEF MICROGRID Robot {
   translation 1.6350886032362346 4.900521505071003e-05 0.09528876539344462
@@ -1004,7 +1004,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
 DEF MICROGRID Robot {
   translation 0.8150379208356754 4.4234772014161885e-05 0.09528324639301403
@@ -1203,5 +1203,5 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
 }
