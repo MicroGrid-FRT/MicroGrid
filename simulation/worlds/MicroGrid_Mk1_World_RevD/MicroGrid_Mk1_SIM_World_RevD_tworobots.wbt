@@ -1,0 +1,426 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.2234763919031253 0.2170804233265046 0.9502285999012796 1.6427367396361832
+  position 0.07524058599760086 -2.388064079419929 1.366339589274657
+  follow "MicroGrid_Mk1_SIM_RevA"
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+Floor {
+  size 100 100
+}
+DEF MICROGRID Robot {
+  translation -0.0050110149293498335 9.25246085188431e-06 0.09529122293216032
+  rotation -0.9920701133746892 0.1204958348343166 0.035744145483034194 9.32652033217188e-05
+  children [
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        position -3.3985851500932693e-10
+        anchor -0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        position -9.784093622641745e-11
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Left"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Left"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Left"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Left"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999971592355444 1.4677253382426023e-06 1.04296026973275e-06
+        rotation -4.068217303255377e-07 0.9999999999998341 -4.0772960090178457e-07 1.5708003046913066
+        children [
+          Connector {
+            translation 0 0 -0.25
+            name "Left_Connector"
+            distanceTolerance 0.05
+            axisTolerance 0.5
+            rotationTolerance 0.5
+          }
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Left_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Left_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+        linearVelocity -7.015503236033983e-05 6.317916601889194e-06 2.3482896460793657e-06
+        angularVelocity -6.320193688120279e-05 7.585853748710369e-06 6.606230838344201e-09
+      }
+    }
+    Accelerometer {
+      name "Body_Accelerometer"
+    }
+    Gyro {
+      name "Body_Gyro"
+    }
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        position 4.075050474223983e-10
+        anchor 0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        position 1.6535220179175435e-10
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Right"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Right"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Right"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16000366133659225 -1.343060752786215e-06 1.0904219983091621e-05
+        rotation -2.850595637530756e-08 -0.999999999999999 2.9480071906945847e-08 1.570800010229636
+        children [
+          Connector {
+            translation 0 0 -0.25
+            name "Right_Connector"
+            distanceTolerance 0.05
+            axisTolerance 0.5
+            rotationTolerance 0.5
+          }
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Right_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Right_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+        linearVelocity -2.7625273798630402e-05 6.32187430717464e-06 -1.333759267821321e-06
+        angularVelocity -6.32017896950297e-05 3.3300961561785212e-06 7.153510312811861e-09
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 1 0 0
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "MicroGrid_Mk1_SIM_RevA"
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  linearVelocity -7.01581968458811e-05 6.319034981992308e-06 2.6079616412744147e-07
+  angularVelocity -6.32017855164382e-05 7.5858653731941655e-06 6.741342279759433e-09
+}
+DEF MICROGRID Robot {
+  translation 0.8149403186510814 9.176376089657721e-06 0.09529117830996063
+  rotation -0.9905908618543237 0.13203993569562728 0.0359888842867245 9.264073052051368e-05
+  children [
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        position -4.343690510909944e-10
+        anchor -0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        position -1.7337063772686027e-10
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Left"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Left"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Left"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Left"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999971592355433 1.4677253383197168e-06 1.0429602695940346e-06
+        rotation -4.0683122055485214e-07 0.9999999999998341 -4.0781462087035137e-07 1.5708003046913066
+        children [
+          Connector {
+            translation 0 0 -0.25
+            name "Left_Connector"
+            isLocked TRUE
+            distanceTolerance 0.05
+            axisTolerance 0.5
+            rotationTolerance 0.5
+          }
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Left_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Left_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+        linearVelocity 2.7889460622936105e-05 6.320021430779645e-06 -1.2073352627306026e-06
+        angularVelocity -6.320140618909754e-05 -9.28424048624177e-07 7.3188860615597044e-09
+      }
+    }
+    Accelerometer {
+      name "Body_Accelerometer"
+    }
+    Gyro {
+      name "Body_Gyro"
+    }
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        position 3.130217683519945e-10
+        anchor 0.16 0 0
+      }
+      jointParameters2 JointParameters {
+        position 9.698921799074494e-11
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Right"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Right"
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Right"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16000366133659216 -1.3430607520062484e-06 1.0904219983218517e-05
+        rotation -2.8587379332732093e-08 -0.999999999999999 2.949313218048561e-08 1.570800010229636
+        children [
+          Connector {
+            translation 0 0 -0.25
+            name "Right_Connector"
+            distanceTolerance 0.05
+            axisTolerance 0.5
+            rotationTolerance 0.5
+          }
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Right_Arm_End"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.96
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Right_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.04
+        }
+        linearVelocity 7.041920612044798e-05 6.324434344145689e-06 1.158251369229012e-06
+        angularVelocity -6.320125898634265e-05 -5.182916167641989e-06 7.838661304709891e-09
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 1 0 0
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "MicroGrid_Mk1_SIM_RevA(1)"
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  linearVelocity 7.042220622804575e-05 6.321365657189931e-06 -2.6826822997907214e-07
+  angularVelocity -6.320138327272793e-05 -5.182899194774601e-06 7.703745368174986e-09
+}
