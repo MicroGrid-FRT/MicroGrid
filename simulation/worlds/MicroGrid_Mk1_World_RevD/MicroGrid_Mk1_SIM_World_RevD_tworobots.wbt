@@ -216,7 +216,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
   linearVelocity -7.01581968458811e-05 6.319034981992308e-06 2.6079616412744147e-07
   angularVelocity -6.32017855164382e-05 7.5858653731941655e-06 6.741342279759433e-09
 }
@@ -420,7 +420,7 @@ DEF MICROGRID Robot {
     density -1
     mass 1
   }
-  controller "MicroGrid_Mk1_SIM_Controller_v2"
+  controller "MicroGrid_Mk1_SIM_Controller_v4"
   linearVelocity 7.042220622804575e-05 6.321365657189931e-06 -2.6826822997907214e-07
   angularVelocity -6.320138327272793e-05 -5.182899194774601e-06 7.703745368174986e-09
 }
