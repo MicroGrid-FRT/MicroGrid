@@ -1,0 +1,221 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material1 "Steel"
+      material2 "Rubber"
+      coulombFriction [
+        3
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.14385255553845747 0.1521950393274771 0.9778257064882077 1.5242889266256985
+  position -0.15004162600941395 -2.1986238317818243 0.3409455472192211
+  follow "MicroGrid_Mk1_SIM_RevA"
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+Floor {
+  contactMaterial "Steel"
+  size 100 100
+}
+Robot {
+  translation 0 0 0.1
+  rotation 0.5773489358550934 0.5773519358547601 0.5773499358549823 2.0944
+  children [
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0 0 -0.16
+      }
+      jointParameters2 JointParameters {
+        axis 0 1 0
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Left"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Left"
+          maxVelocity 20
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Left"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Left"
+        }
+      ]
+      endPoint Solid {
+        translation 0.0007488462385242037 0.006873576018120586 -0.1600173176185765
+        rotation 0.004318671135075468 -0.004296796626477204 0.9999814431370103 1.6237798517828916
+        children [
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Left_Arm_End"
+            contactMaterial "Rubber"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.23
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Left_Arm"
+        contactMaterial "Rubber"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.02
+        }
+      }
+    }
+    Accelerometer {
+      name "Body_Accelerometer"
+    }
+    Gyro {
+      name "Body_Gyro"
+    }
+    Hinge2Joint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0 0 0.16
+      }
+      jointParameters2 JointParameters {
+        axis 0 1 0
+        minStop -1.57
+        maxStop 1.57
+      }
+      device [
+        PositionSensor {
+          name "Continuous_Position_Right"
+        }
+        RotationalMotor {
+          name "Continuous_Motor_Right"
+          maxVelocity 20
+        }
+      ]
+      device2 [
+        PositionSensor {
+          name "Fixed_Position_Right"
+        }
+        RotationalMotor {
+          name "Fixed_Motor_Right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.0006325834061199037 -0.006812874310307879 0.1613399594979829
+        rotation 0.9997947099021809 -0.020261725601185922 -2.2962493271246746e-05 3.153324675506069
+        children [
+          Solid {
+            translation 0 0 -0.12
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    emissiveColor 0 1 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.24
+                  radius 0.06
+                }
+              }
+            ]
+            name "Right_Arm_End"
+            contactMaterial "Rubber"
+            boundingObject Cylinder {
+              height 0.24
+              radius 0.06
+            }
+            physics Physics {
+              density -1
+              mass 0.23
+            }
+          }
+          Shape {
+            appearance Appearance {
+              material Material {
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Sphere {
+              radius 0.06
+            }
+          }
+        ]
+        name "Right_Arm"
+        boundingObject Sphere {
+          radius 0.06
+        }
+        physics Physics {
+          density -1
+          mass 0.02
+        }
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 1 0 0
+        }
+      }
+      geometry Capsule {
+        height 0.04
+        radius 0.08
+      }
+    }
+  ]
+  name "MicroGrid_Mk1_SIM_RevA"
+  contactMaterial "Plastic"
+  boundingObject Capsule {
+    height 0.04
+    radius 0.08
+    subdivision 16
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "MicroGrid_Mk1_SIM_Controller_v2"
+}
